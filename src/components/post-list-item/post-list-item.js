@@ -7,8 +7,7 @@ export default class PostListItem extends Component {
         super(props);
         this.state = {
             important: false,
-            like: false,
-            postDate: (new Date()).toLocaleDateString()+" "+(new Date()).toLocaleTimeString()
+            like: false
         };
         this.onImportant = this.onImportant.bind(this);
         this.onLike = this.onLike.bind(this);
@@ -27,8 +26,8 @@ export default class PostListItem extends Component {
         }
 
     render () {
-        const {label} = this.props;
-        const {important, like, postDate} = this.state;
+        const {label, postDate} = this.props;
+        const {important, like} = this.state;
 
         let classNames = 'app-list-item d-flex justify-content-between';
         
